@@ -1,0 +1,64 @@
+[
+{
+  "model": "portfolio.profile",
+  "pk": 1,
+  "fields": {
+    "name": "Eng. Tenywa Ibrahim",
+    "title": "Mining Engineer",
+    "bio": "Eng. Tenywa Ibrahim is a Mining Engineer with over three years of hands-on experience in underground, surface, and artisanal mining operations. He currently serves as a Mining Engineer at LACLARZ Investments Ltd, leading iron ore mining operations, mine planning, production optimization, geological mapping, ore body evaluation, and mineral resource assessment.\r\n\r\nHe holds professional certifications in Mine Design & Planning and Primavera P6 Project Planning and is currently pursuing a Master's degree in Environment and Natural Resources at Kabale University.\r\n\r\nEng. Ibrahim is passionate about applying modern geological mapping technologies and spatial data analysis to improve mineral exploration, mine planning, and sustainable resource development.",
+    "profile_photo": "profile/Tenywa_profile.jpeg",
+    "cv": "",
+    "current_position": "Mining Engineer at LACLARZ Investments Ltd",
+    "years_of_experience": 4,
+    "location": "Based in Kisoro, Kigezi western Uganda",
+    "email": "tenywaibrahim2019@gmail.com",
+    "phone": "0755703959",
+    "linkedin": "",
+    "created_at": "2026-08-10T10:55:51.974Z",
+    "updated_at": "2026-08-14T07:13:40.153Z"
+  }
+},
+{
+  "model": "portfolio.certificate",
+  "pk": 1,
+  "fields": {
+    "name": "Mine Design & Planning",
+    "issuing_organization": "...............................coming soon",
+    "description": "........................................................................................................... coming soon",
+    "certificate_file": "certificates/20260810_OHR.SandPath_EN-US3759872156_UHD_bing.jpg",
+    "issue_date": "2022-12-02",
+    "created_at": "2026-08-10T11:00:56.919Z"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 1,
+  "fields": {
+    "title": "Iron Ore Mining Operations",
+    "description": "Mining engineering activities involving iron ore mining operations, mine planning, production optimization, geological mapping, ore body evaluation and mineral resource assessment.",
+    "location": "Based in Kisoro, Kigezi western Uganda",
+    "client": "LACLARZ Investments Ltd",
+    "role": "Mining Engineer",
+    "project_date": "2026-03-30",
+    "project_image": "projects/ore_project2.jpeg",
+    "project_document": "project_documents/20260623_OHR.Fujisan_EN-US6479372200_UHD_bing.jpg",
+    "created_at": "2026-08-11T05:59:47.163Z",
+    "updated_at": "2026-08-11T06:03:48.986Z"
+  }
+},
+{
+  "model": "portfolio.experience",
+  "pk": 1,
+  "fields": {
+    "job_title": "Mining Engineer",
+    "company": "LACLARZ Investments Ltd",
+    "location": "Based in Kisoro, Kigezi western Uganda",
+    "description": "Leading iron ore mining operations, mine planning, production optimization, geological mapping, ore body evaluation, and mineral resource assessment.",
+    "start_date": "2026-03-30",
+    "end_date": null,
+    "is_current": true,
+    "created_at": "2026-08-11T06:24:08.312Z",
+    "updated_at": "2026-08-11T06:24:08.312Z"
+  }
+}
+]
