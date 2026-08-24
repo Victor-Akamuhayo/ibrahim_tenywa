@@ -1,5 +1,4 @@
-﻿{% load static %}
-{% extends 'portfolio/base.html' %}
+﻿{% extends 'portfolio/base.html' %}
 
 {% block title %}
 Eng. Tenywa Ibrahim | Mining Engineer
@@ -69,7 +68,7 @@ Eng. Tenywa Ibrahim | Mining Engineer
     {% else %}
 
         <img
-            src="{% static 'portfolio/images/hero.jpeg' %}"
+            src="{{ fallback_profile_photo_url }}"
             alt="{{ profile.name }}"
         >
 

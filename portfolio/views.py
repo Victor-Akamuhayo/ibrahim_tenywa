@@ -1,4 +1,4 @@
-from types import SimpleNamespace
+﻿from types import SimpleNamespace
 
 from django.db.utils import OperationalError
 from django.shortcuts import render
@@ -45,6 +45,7 @@ def home(request):
         'education': education,
         'projects': projects,
         'skills': skills,
+        'fallback_profile_photo_url': '/static/portfolio/images/hero.jpeg',
     }
 
     return render(request, 'portfolio/home.html', context)
