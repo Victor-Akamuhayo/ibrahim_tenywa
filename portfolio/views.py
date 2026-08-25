@@ -46,6 +46,7 @@ def home(request):
         'projects': projects,
         'skills': skills,
         'fallback_profile_photo_url': '/static/portfolio/images/hero.jpeg',
+        'fallback_project_image_url': '/static/portfolio/images/hero.jpeg',
     }
 
     return render(request, 'portfolio/home.html', context)

@@ -56,24 +56,11 @@ Eng. Tenywa Ibrahim | Mining Engineer
 
             <div class="image-frame">
 
-                <div class="image-placeholder">
-
-    {% if profile.profile_photo %}
-
-        <img
-            src="{{ profile.profile_photo.url }}"
-            alt="{{ profile.name }}"
-        >
-
-    {% else %}
-
-        <img
-            src="{{ fallback_profile_photo_url }}"
-            alt="{{ profile.name }}"
-        >
-
-    {% endif %}
-
+               <div class="image-placeholder">
+    <img
+        src="{% if profile.profile_photo %}{{ profile.profile_photo.url }}{% else %}{{ fallback_profile_photo_url }}{% endif %}"
+        alt="{{ profile.name }}"
+    >
 </div>
 
             </div>
@@ -619,19 +606,16 @@ Eng. Tenywa Ibrahim | Mining Engineer
 
         <article class="project-card">
 
-            {% if project.project_image %}
+           {% if project.project_image %}
 
-                <div class="project-image">
+    <div class="project-image">
+        <img
+            src="{{ project.project_image.url }}"
+            alt="{{ project.title }}"
+        >
+    </div>
 
-                    <img
-                        src="{{ project.project_image.url }}"
-                        alt="{{ project.title }}"
-                    >
-
-                </div>
-
-            {% endif %}
-
+{% endif %}
 
             <div class="project-content">
 
