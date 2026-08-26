@@ -60,6 +60,7 @@ Eng. Tenywa Ibrahim | Mining Engineer
     <img
         src="{% if profile.profile_photo %}{{ profile.profile_photo.url }}{% else %}{{ fallback_profile_photo_url }}{% endif %}"
         alt="{{ profile.name }}"
+        onerror="this.onerror=null;this.src='{{ fallback_profile_photo_url }}';"
     >
 </div>
 
@@ -612,6 +613,7 @@ Eng. Tenywa Ibrahim | Mining Engineer
         <img
             src="{{ project.project_image.url }}"
             alt="{{ project.title }}"
+            onerror="this.onerror=null;this.src='{{ fallback_project_image_url }}';"
         >
     </div>
 
