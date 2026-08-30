@@ -1,5 +1,39 @@
+from django import forms
 from django.contrib import admin
-from .models import Profile, Certificate, Project , Experience, Education, Skill     
+
+from .models import Certificate, Education, Experience, Profile, Project, Skill
+
+
+MAX_UPLOAD_SIZE = 4 * 1024 * 1024
+
+
+def validate_upload_size(file):
+    if file and file.size > MAX_UPLOAD_SIZE:
+        raise forms.ValidationError(
+            'Please upload an image smaller than 4 MB for Vercel/Cloudinary.'
+        )
+
+
+class ProfileAdminForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = '__all__'
+
+    def clean_profile_photo(self):
+        file = self.cleaned_data.get('profile_photo')
+        validate_upload_size(file)
+        return file
+
+
+class ProjectAdminForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        fields = '__all__'
+
+    def clean_project_image(self):
+        file = self.cleaned_data.get('project_image')
+        validate_upload_size(file)
+        return file
 
 
 @admin.register(Education)
@@ -13,8 +47,10 @@ class EducationAdmin(admin.ModelAdmin):
         'is_current',
     )
 
+
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
+    form = ProfileAdminForm
     list_display = (
         'name',
         'title',
@@ -34,6 +70,7 @@ class CertificateAdmin(admin.ModelAdmin):
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
+    form = ProjectAdminForm
     list_display = (
         'title',
         'location',
@@ -53,6 +90,7 @@ class ExperienceAdmin(admin.ModelAdmin):
         'end_date',
         'is_current',
     )
+
 
 @admin.register(Skill)
 class SkillAdmin(admin.ModelAdmin):
